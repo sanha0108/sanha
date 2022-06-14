@@ -1,0 +1,1034 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>index</title>
+
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+			box-sizing: border-box;
+			color: #5b5b5b;
+			font-family: "pretendard";
+			font-weight: 300;
+		}
+
+		a{
+			text-decoration: none;
+		}
+
+		@font-face{
+			src: url("font/pretendard-midium.otf/pretendard-regular.otf/pretendard-thin.otf/pretendard-bold.otf");
+			font-family: "pretendard";
+		}
+
+		@font-face{
+			src: url("font/SDSamliphopangcheBasic.otf");
+			font-family: "SDsamlip";
+		}
+
+		.header_backimg{
+			background-image: url(https://i.postimg.cc/4yFnzzxf/minku-kang-Dpzk-BQq7ej0-unsplash.jpg);
+			width: 1920px;
+			height: 840px;
+			background-repeat: no-repeat;
+			background-size: cover;
+			background-position: center center;
+		}
+
+		.header{
+			padding: 48px 360px 317px 360px;
+			vertical-align: middle;
+			line-height: 38.5px;
+			margin-left: auto;
+			margin-right: auto;
+			display: flex;
+			align-items: center;
+		}
+			.header_menu{
+				float: left;
+			}
+				.header_menu img{
+					width: 48px;
+					height: 48px;
+					line-height: 38.5px;
+					vertical-align: middle;
+				}
+			.header_logo{
+				float: left;
+			}
+				.header_logo img{
+					height: 38.5px;
+					line-height: 38.5px;
+					vertical-align: middle;
+					margin-left: 475px;
+					margin-right: 475px;
+				}
+			.header_login{
+
+			}
+				.header_login img{
+					width: 48px;
+					height: 48px;
+					line-height: 38.5px;
+					vertical-align: middle;
+				}
+
+		h2{
+			text-align: center;
+			color: white;
+			font-weight: 300;
+			margin-bottom: 24px;
+			font-size: 24px;
+		}
+
+		.main_search input[type=text]{
+			width: 576px;
+			height: 64px;
+			margin: 0px auto;
+			display: block;
+			font-size: 20px;
+			padding-left: 48px;
+			border-radius: 50px;
+			background-color: rgba(0, 0, 0, 0.4);
+			border: none;
+			color: white;
+		}
+			.main_search input[type=text]::placeholder{
+				color: white;
+			}
+			.search_btn{
+				width: 38px;
+				height: 38px;
+				display: flex;
+				position: relative;
+				bottom: 50px;
+				left: 1180px;
+			}
+
+		.keyword{
+			margin-left: 672px;
+			margin-top: -20px;
+		}
+			.keyword a{
+				text-decoration: none;
+			}
+			.k_item{
+				background-color: rgba(0, 0, 0, 0.4);
+				color: white;
+				border-radius: 50px;
+				padding: 8px 16px;
+				margin-right: 8px;
+				font-size: 14px;
+				font-weight: 200;
+			}
+
+		.suggest{
+			margin-top: 56px;
+			margin-bottom: 56px;
+			text-align: center;
+			width: 1920px;
+		}
+			.suggest a{
+				text-decoration: none;
+			}
+			.s_item img{
+				width: 136px;
+				height: 136px;
+				border-radius: 110px;
+				margin: 0 24px;
+				z-index: 2;
+			}
+				.s_item img:hover{
+					background-color: rgba(0, 0, 0, 0.4);
+				}
+			
+
+	.hotplace_backcolor{
+			width: 1920px;
+			height: 816px;
+			background-color: #fafafa;
+		}
+
+		.hotplace h3{
+			text-align: center;
+			font-size: 36px;
+			font-family: "SDsamlip";
+			color: #E87A3C;
+			padding-top: 96px;
+			margin-bottom: 32px;
+		}
+		.hotplace_box{
+			width: 1200px;
+			height: 564px;
+			margin: 0 auto;
+		}
+		.hotplace_item1{
+			display: inline-block;
+			vertical-align: top;
+			width: 376px;
+			position: relative;
+			overflow: hidden;
+			float: left;
+		}
+		.hotplace_item1 img{
+			width: 376px;
+			height: 376px;
+		}
+			.item1_hidden{
+				display: block;
+				width: auto;
+				text-decoration: none;
+			}
+			.item_data1{
+				position: absolute;
+				bottom: 150%;
+				left: 30px;
+				z-index: 2;
+				color: white;
+				font-size: 20px;
+				transition: all .35s;
+			}
+				.hotplace_item1:hover .item_data1{
+					bottom: 52%;
+				}
+				.hotplace_item1:hover .item_btn1{
+					top: 52%;
+				}
+			.item_btn1{
+				position: absolute;
+				top: 150%;
+				left: 30px;
+				z-index: 2;
+				color: white;
+				font-size: 20px;
+				transition: all .35s;
+				background-color: #E87A3C;
+				color: white;
+				padding: 5px 15px;
+				border-radius: 50px;
+				font-weight: 500;
+			}
+				
+			.item1_hidden::after{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.4);
+				z-index: 1;
+				opacity: 0;
+				transition: all .35s;
+			}
+				.hotplace_item1:hover .item1_hidden::after{
+					opacity: 1;
+				}
+
+		.hotplace_item2{
+			display: inline-block;
+			vertical-align: top;
+			width: 824px;
+			height: 104px;
+			position: relative;
+			overflow: hidden;
+			float: left;
+		}
+		.hotplace_item2 img{
+			width: 824px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+
+		}
+			.item2_hidden{
+				display: block;
+				width: auto;
+				text-decoration: none;
+			}
+			.item_data2{
+				position: absolute;
+				bottom: 150%;
+				left: 30px;
+				z-index: 2;
+				color: white;
+				font-size: 20px;
+				transition: all .35s;
+			}
+				.hotplace_item2:hover .item_data2{
+					bottom: 28%;
+				}
+				.hotplace_item2:hover .item_btn2{
+					top: 32%;
+				}
+			.item_btn2{
+				position: absolute;
+				top: 150%;
+				right: 30px;
+				z-index: 2;
+				color: white;
+				font-size: 20px;
+				transition: all .35s;
+				background-color: #E87A3C;
+				color: white;
+				padding: 5px 15px;
+				border-radius: 50px;
+				font-weight: 500;
+			}
+			.item2_hidden::after{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.4);
+				z-index: 1;
+				opacity: 0;
+				transition: all .35s;
+			}
+				.hotplace_item2:hover .item2_hidden::after{
+					opacity: 1;
+				}
+
+		.hotplace_item3{
+			display: inline-block;
+			vertical-align: top;
+			width: 512px;
+			height: 272px;
+			position: relative;
+			overflow: hidden;
+			float: left;
+		}
+		.hotplace_item3 img{
+			width: 100%;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center;
+		}
+			.item3_hidden{
+				display: block;
+				width: auto;
+				text-decoration: none;
+			}
+			.item_data3{
+				position: absolute;
+				bottom: 150%;
+				left: 30px;
+				z-index: 2;
+				color: white;
+				font-size: 20px;
+				transition: all .35s;
+			}
+				.hotplace_item3:hover .item_data3{
+					bottom: 52%;
+				}
+				.hotplace_item3:hover .item_btn3{
+					top: 52%;
+				}
+			.item_btn3{
+				position: absolute;
+				top: 150%;
+				left: 30px;
+				z-index: 2;
+				color: white;
+				font-size: 20px;
+				transition: all .35s;
+				background-color: #E87A3C;
+				color: white;
+				padding: 5px 15px;
+				border-radius: 50px;
+				font-weight: 500;
+			}
+				
+			.item3_hidden::after{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.4);
+				z-index: 1;
+				opacity: 0;
+				transition: all .35s;
+			}
+				.hotplace_item3:hover .item3_hidden::after{
+					opacity: 1;
+				}
+
+		.hotplace_item4{
+			display: inline-block;
+			vertical-align: top;
+			width: 312px;
+			height: 460px;
+			position: relative;
+			overflow: hidden;
+			float: left;
+		}
+		.hotplace_item4 img{
+			width: 312px;
+			height: 460px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+			.item4_hidden{
+				display: block;
+				width: auto;
+				text-decoration: none;
+			}
+			.item_data4{
+				position: absolute;
+				bottom: 150%;
+				left: 30px;
+				padding-right: 30px;
+				z-index: 2;
+				color: white;
+				font-size: 20px;
+				transition: all .35s;
+			}
+				.hotplace_item4:hover .item_data4{
+					bottom: 52%;
+				}
+				.hotplace_item4:hover .item_btn4{
+					top: 52%;
+				}
+			.item_btn4{
+				position: absolute;
+				top: 150%;
+				left: 30px;
+				z-index: 2;
+				color: white;
+				font-size: 20px;
+				transition: all .35s;
+				background-color: #E87A3C;
+				color: white;
+				padding: 5px 15px;
+				border-radius: 50px;
+				font-weight: 500;
+			}
+				
+			.item4_hidden::after{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.4);
+				z-index: 1;
+				opacity: 0;
+				transition: all .35s;
+			}
+				.hotplace_item4:hover .item4_hidden::after{
+					opacity: 1;
+				}
+
+		.hotplace_item5{
+			display: inline-block;
+			vertical-align: top;
+			width: 600px;
+			height: 188px;
+			position: relative;
+			bottom: 188px;
+			overflow: hidden;
+			float: left;
+		}
+		.hotplace_item5 img{
+			width: 600px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+			.item5_hidden{
+				display: block;
+				width: auto;
+				text-decoration: none;
+			}
+			.item_data5{
+				position: absolute;
+				bottom: 150%;
+				left: 30px;
+				padding-right: 30px;
+				z-index: 2;
+				color: white;
+				font-size: 20px;
+				transition: all .35s;
+			}
+				.hotplace_item5:hover .item_data5{
+					bottom: 52%;
+				}
+				.hotplace_item5:hover .item_btn5{
+					top: 58%;
+				}
+			.item_btn5{
+				position: absolute;
+				top: 150%;
+				left: 30px;
+				z-index: 2;
+				color: white;
+				font-size: 20px;
+				transition: all .35s;
+				background-color: #E87A3C;
+				color: white;
+				padding: 5px 15px;
+				border-radius: 50px;
+				font-weight: 500;
+			}
+				
+			.item5_hidden::after{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.4);
+				z-index: 1;
+				opacity: 0;
+				transition: all .35s;
+			}
+				.hotplace_item5:hover .item5_hidden::after{
+					opacity: 1;
+				}
+
+		.hotplace_item6{
+			display: inline-block;
+			vertical-align: top;
+			width: 288px;
+			height: 188px;
+			position: relative;
+			bottom: 188px;
+			overflow: hidden;
+			float: left;
+		}
+		.hotplace_item6 img{
+			width: 288px;
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+		}
+			.item6_hidden{
+				display: block;
+				width: auto;
+				text-decoration: none;
+			}
+			.item_data6{
+				position: absolute;
+				bottom: 150%;
+				left: 30px;
+				padding-right: 30px;
+				z-index: 2;
+				color: white;
+				font-size: 20px;
+				transition: all .35s;
+			}
+				.hotplace_item6:hover .item_data6{
+					bottom: 44%;
+				}
+				.hotplace_item6:hover .item_btn6{
+					top: 64%;
+				}
+			.item_btn6{
+				position: absolute;
+				top: 150%;
+				left: 30px;
+				z-index: 2;
+				color: white;
+				font-size: 20px;
+				transition: all .35s;
+				background-color: #E87A3C;
+				color: white;
+				padding: 5px 15px;
+				border-radius: 50px;
+				font-weight: 500;
+			}
+				
+			.item6_hidden::after{
+				content: '';
+				display: block;
+				position: absolute;
+				top: 0;
+				left: 0;
+				width: 100%;
+				height: 100%;
+				background-color: rgba(0, 0, 0, 0.4);
+				z-index: 1;
+				opacity: 0;
+				transition: all .35s;
+			}
+				.hotplace_item6:hover .item6_hidden::after{
+					opacity: 1;
+				}
+
+		.review{
+			width: 1920px;
+		}
+		.review h4{
+			text-align: center;
+			font-size: 32px;
+			font-family: "SDsamlip";
+			color: #E87A3C;
+			margin-top: 96px;
+			margin-bottom: 32px;
+		}
+
+		.review_container{
+			width: 1200px;
+			height: 432px;
+			margin-left: auto;
+			margin-right: auto;
+			margin-bottom: 120px;
+		}
+			.review_item1{
+				width: 280px;
+				height: 432px;
+				float: left;
+				margin-right: 32px;
+			}
+			.review_item1 img{
+				width: 280px;
+				height: 312px;
+				margin: 0;
+			}
+			.textbox_1{
+				width: 280px;
+				height: 120px;
+				margin-top: -4px;
+				background-color: #F3F3F3;
+				padding: 0 16px 16px 16px;
+			}
+				.instaid{
+					font-size: 14px;
+					font-weight: bold;
+					padding-top: 12px;
+					margin-bottom: 4px;
+				}
+				.review_text{
+					font-size: 14px;
+					text-align: justify;
+					letter-spacing: -0.5px;
+					font-weight: normal;
+				}
+
+			.review_item2{
+				width: 280px;
+				height: 432px;
+				float: left;
+				margin-right: 32px;
+			}
+			.review_item2 img{
+				width: 280px;
+				height: 312px;
+				margin: 0;
+			}
+			.textbox_2{
+				width: 280px;
+				height: 120px;
+				margin-top: -4px;
+				background-color: #F3F3F3;
+				padding: 0 16px 16px 16px;
+			}
+				.instaid{
+					font-size: 14px;
+					font-weight: bold;
+					padding-top: 12px;
+					margin-bottom: 4px;
+				}
+				.review_text{
+					font-size: 14px;
+					text-align: justify;
+					letter-spacing: -0.5px;
+					font-weight: normal;
+				}
+
+			.review_item3{
+				width: 576px;
+				height: 128px;
+				float: left;
+				margin-bottom: 24px;
+			}
+			.review_item3 img{
+				width: 128px;
+				height: 128px;
+				float: left;
+			}
+			.textbox_3{
+				width: 448px;
+				height: 128px;
+				background-color: #F3F3F3;
+				padding: 0 20px 24px 20px;
+				margin-left: 128px;
+			}
+				.instaid{
+					font-size: 14px;
+					font-weight: bold;
+					padding-top: 24px;
+					margin-bottom: 8px;
+				}
+				.review_text{
+					font-size: 14px;
+					text-align: justify;
+					letter-spacing: -0.5px;
+					font-weight: normal;
+				}
+
+			.review_item4{
+				width: 576px;
+				height: 128px;
+				float: left;
+				margin-bottom: 24px;
+			}
+			.review_item4 img{
+				width: 128px;
+				height: 128px;
+				float: left;
+			}
+			.textbox_4{
+				width: 448px;
+				height: 128px;
+				background-color: #F3F3F3;
+				padding: 0 20px 24px 20px;
+				margin-left: 128px;
+			}
+				.instaid{
+					font-size: 14px;
+					font-weight: bold;
+					padding-top: 24px;
+					margin-bottom: 8px;
+				}
+				.review_text{
+					font-size: 14px;
+					text-align: justify;
+					letter-spacing: -0.5px;
+					font-weight: normal;
+				}
+
+			.review_item5{
+				width: 576px;
+				height: 128px;
+				float: left;
+			}
+			.review_item5 img{
+				width: 128px;
+				height: 128px;
+				float: left;
+			}
+			.textbox_5{
+				width: 448px;
+				height: 128px;
+				background-color: #F3F3F3;
+				padding: 0 20px 24px 20px;
+				margin-left: 128px;
+			}
+				.instaid{
+					font-size: 14px;
+					font-weight: bold;
+					padding-top: 24px;
+					margin-bottom: 8px;
+				}
+				.review_text{
+					font-size: 14px;
+					text-align: justify;
+					letter-spacing: -0.5px;
+					font-weight: normal;
+				}
+
+		.bottom_back{
+			width: 1920px;
+			height: 192px;
+			background-color: #EBEBEB;
+			padding-top: 32px;
+		}
+		.bottom_container{
+			width: 1200px;
+			margin-left: auto;
+			margin-right: auto;
+		}
+		.left{
+			float: left;
+		}
+			.b_1{
+				font-size: 16px;
+				font-weight: bold;
+			}
+			.b_2{
+				font-size: 32px;
+				font-weight: bold;
+				margin-bottom: 8px;
+			}
+			.b_3{
+				font-size: 14px;
+				font-weight: 400;
+				margin-bottom: 12px;
+			}
+			.link{
+				font-size: 12px;
+			}
+				.link_text{
+					font-weight: 500;
+					margin-right: 8px;
+				}
+
+		.right{
+			float: right;
+		}
+			.right img{
+				width: 98.74px;
+				height: 24.89px;
+				margin-top: 60px;
+				margin-bottom: 8px;
+				margin-left: 125px;
+			}
+			.b_4{
+				font-size: 11px;
+				font-weight: 400;
+			}
+
+
+	</style>
+</head>
+
+<body>
+	<div class="header_backimg">
+		<div class="header">
+			<div class="header_menu">
+				<a href="#">
+					<img src="https://i.postimg.cc/Gm19Kb1G/menu.png">
+				</a>
+			</div>
+
+			<div class="header_logo">
+				<a href="#">
+					<img src="https://i.postimg.cc/Hk2ZssYt/logo1.png">
+				</a>
+			</div>
+
+			<div class="header_login">
+				<a href="login.html">
+					<img src="https://i.postimg.cc/j2tRp4RX/login1.png">
+				</a>
+			</div>
+		</div>
+
+		<div class="main_search">
+			<form>
+				<h2>원하는 키워드를 검색해 보세요!</h2>
+				<input class="search_text" type="text" placeholder="search">
+				<a class="search_btn" href="#">
+					<img src="https://i.postimg.cc/3RypcpKW/search.png">
+				</a>
+			</form>
+		</div>
+
+		<div class="keyword">
+			<a href="#" class="k_item">＃홍대</a>
+			<a href="#" class="k_item">＃압구정</a>
+			<a href="#" class="k_item">＃용산</a>
+			<a href="#" class="k_item">＃디저트카페</a>
+			<a href="#" class="k_item">＃인생네컷</a>
+		</div>
+	</div>
+
+	<div class="suggest">
+		<div class="s_item">
+			<a class="s_item1" href="#">
+				<img src="https://i.postimg.cc/NfLvFkg5/p1.png">
+			</a>
+
+			<a class="s_item2" href="#">
+				<img src="https://i.postimg.cc/sgFHzY1F/p2-2.png">
+			</a>
+
+			<a class="s_item3" href="#">
+				<img src="https://i.postimg.cc/dV8HVhTh/p3.png">
+			</a>
+
+			<a class="s_item4" href="#">
+				<img src="https://i.postimg.cc/HLdScTQB/p4.png">
+			</a>
+
+			<a class="s_item5" href="#">
+				<img src="https://i.postimg.cc/1tYMj6bj/p5.png">
+			</a>
+
+			<a class="s_item6" href="#">
+				<img src="https://i.postimg.cc/FzdG5z4s/p6.png">
+			</a>
+		</div>
+	</div>
+
+	<div class="hotplace_backcolor">
+		<div class="hotplace">
+			<h3>HOT PLACE</h3>
+			<div class="hotplace_box">
+				<div class="hotplace_item1">
+					<img src="https://i.postimg.cc/dQxRzp9H/art.jpg">
+					<div class="item1_hidden">
+						<p class="item_data1">
+							그림 제작소 연남점<br>
+							서울 마포구 성미산로 170 2층
+						</p>
+						<a class="item_btn1" href="#">View more</a>
+					</div>
+				</div>
+
+				<div class="hotplace_item2">
+					<img src="https://i.postimg.cc/y6FHPsQm/1.png">
+					<div class="item2_hidden">
+						<p class="item_data2">
+							뚝섬유원지<br>
+							서울 광진구 자양동 112
+						</p>
+						<a class="item_btn2" href="#">View more</a>
+					</div>
+				</div>
+
+				<div class="hotplace_item3">
+					<img src="https://i.postimg.cc/mDKgFjrT/1.png">
+					<div class="item3_hidden">
+						<p class="item_data3">
+							미도인 성수<br>
+							서울 성동구 연무장7가길 3 1층
+						</p>
+						<a class="item_btn3" href="#">View more</a>
+					</div>
+				</div>
+
+				<div class="hotplace_item4">
+					<img src="https://i.postimg.cc/pXpy1NKs/image.png">
+					<div class="item4_hidden">
+						<p class="item_data4">
+							경성빵공장 남한산성점<br>
+							경기 광주시 남한산성면 남한산성로 714
+						</p>
+						<a class="item_btn4" href="#">View more</a>
+					</div>
+				</div>
+
+				<div class="hotplace_item5">
+					<img src="https://i.postimg.cc/x1ZV6CKd/1.png">
+					<div class="item5_hidden">
+						<p class="item_data5">
+							빛의 시어터<br>
+							서울 광진구 워커힐로 177 워커힐호텔 B1층
+						</p>
+						<a class="item_btn5" href="#">View more</a>
+					</div>
+				</div>
+
+				<div class="hotplace_item6">
+					<img src="https://i.postimg.cc/Bn2QP2W0/bbb1.png">
+					<div class="item6_hidden">
+						<p class="item_data6">
+							베베베<br>
+							서울 용산구 이태원로42길 46-12
+						</p>
+						<a class="item_btn6" href="#">View more</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div><br>
+
+	<div class="review">
+		<h4>실제 방문객들의 생생한 리뷰</h4>
+		<div class="review_container">
+			<div class="review_item1">
+				<a href="https://www.instagram.com/p/CdX9beAF5_g/">
+					<img src="https://i.postimg.cc/cCdPHh95/re-1.png">
+				</a>
+				<div class="textbox_1">
+					<p class="instaid">grim_factory</p>
+					<p class="review_text">
+						분위기 최고,, 우리 그냥 사진 찍으면서 슬슬 그리자~ 했다가 갑자기 한마디도 없이 초 집중한ㅎ,, 그림 초보지만 친절하게 알려주셔서 재밌게 놀다 왔습니다🎨👩🏻‍ 게다가 커피 맛집,,☕️🤎
+					</p>
+				</div>
+			</div>
+
+			<div class="review_item2">
+				<a href="https://www.instagram.com/p/CevQPfGhSrs/">
+					<img src="https://i.postimg.cc/y8mwcWtZ/re-2.png">
+				</a>
+				<div class="textbox_2">
+					<p class="instaid">seoul_thehotple</p>
+					<p class="review_text">
+						건물 통채로 베이커리 카페로, 유럽농막 감성을 그대로 재현한 공간. 층별 공간 컨셉이 달라서 사진찍는 재미가 있는 곳.
+					</p>
+				</div>
+			</div>
+
+			<div class="review_item3">
+				<a href="https://www.instagram.com/p/Cdu7PbgrNPy/">
+					<img src="https://i.postimg.cc/prnn6NMg/re-3.png">
+				</a>
+				<div class="textbox_3">
+					<p class="instaid">haru._pics</p>
+					<p class="review_text">
+						베이커리 대형카페, 마고플레인 🌳<br>
+						요즘같은 날씨 테라스 웨 안좋아해•• 크림색 외관의 대형 베이커리 카페에 다녀왔어요 빵도 맛있고🥞 음료도 맛있고!
+					</p>
+				</div>
+			</div>
+
+			<div class="review_item4">
+				<a href="https://www.instagram.com/p/CevEnVRhhYv/">
+					<img src="https://i.postimg.cc/hGkJQyds/re-4.png">
+				</a>
+				<div class="textbox_4">
+					<p class="instaid">hirene_31__8</p>
+					<p class="review_text">
+						구로구 맛집을 찾아서 갔는데 여기 완전 대박이에요!<br>
+						재방문의사 20000%!!ㅋㅋㅋ<br>
+						꽃다운주점 구로구청점 진짜 너무 맛있어요!
+					</p>
+				</div>
+			</div>
+
+			<div class="review_item5">
+				<a href="https://www.instagram.com/p/Ces31Q2LlYn/">
+					<img src="https://i.postimg.cc/jj59nvbD/re-5.png">
+				</a>
+				<div class="textbox_5">
+					<p class="instaid">yoribogo_</p>
+					<p class="review_text">
+						큰 창과 맛있는 케이크 덕분에<br>
+						눈과 입 모두 즐거웠던 하루 💚
+					</p>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="bottom_back">
+		<div class="bottom_container">
+			<div class="left">
+				<p class="b_1">고객센터</p>
+				<a href="#" class="b_2">1600-1000</a>
+				<p class="b_3">평일 9:00-18:00(주말 공휴일 제외)</p>
+				<div class="link">
+					<a href="#" class="link_text">브랜드 스토리</a>
+					<a href="#" class="link_text">회사소개</a>
+					<a href="#" class="link_text">채용정보</a>
+					<a href="#" class="link_text">이용약관</a>
+					<a href="#" class="link_text">개인정보처리방침</a>
+				</div>
+			</div>
+
+			<div class="right">
+				<img src="https://i.postimg.cc/rmq9twWQ/login-color.png">
+				<p class="b_4">Copyright ⓒ SANHA SHIN. All rights reserved</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
